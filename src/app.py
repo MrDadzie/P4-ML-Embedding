@@ -50,7 +50,7 @@ if st.button('Predict'):
     }
 )
     # Work with the date
-    df['date'] = df['date'].astype('datetime64')
+    df['date'] = df['date'].astype('datetime64[ns]')
     df = getDateFeatures(df,'date')
     df = df.drop('date',axis =1)
 
